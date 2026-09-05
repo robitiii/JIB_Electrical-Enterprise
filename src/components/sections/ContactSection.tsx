@@ -21,36 +21,39 @@ export const ContactSection: React.FC = () => {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("submitting");
-    setResponseMsg("");
+    
+    // Format the phone number (remove spaces, plus signs, etc.)
+    const phone = COMPANY_INFO.phones[0].replace(/\D/g, ''); // "27679323052"
+    
+    // Construct the WhatsApp message
+    const message = `*JIB Electrical - Quote Request*
+*Name/Business:* ${formData.identifier}
+*Location:* ${formData.geographicSector}
+*Requirements:* ${formData.infrastructureRequirements}`;
 
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+    // URL encode the message
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${phone}?text=${encodedMessage}`;
+
+    // Open WhatsApp in a new tab
+    window.open(whatsappUrl, '_blank');
+    
+    setStatus("success");
+    setResponseMsg("Redirecting to WhatsApp...");
+    
+    // Optional: Reset form after a delay
+    setTimeout(() => {
+      setStatus("idle");
+      setResponseMsg("");
+      setFormData({
+        identifier: "",
+        geographicSector: "",
+        infrastructureRequirements: "",
       });
-
-      const data: ContactResponse = await res.json();
-
-      if (data.success) {
-        setStatus("success");
-        setResponseMsg(data.message);
-        setFormData({
-          identifier: "",
-          geographicSector: "",
-          infrastructureRequirements: "",
-        });
-      } else {
-        setStatus("error");
-        setResponseMsg(data.message || "Failed to transmit directive.");
-      }
-    } catch {
-      setStatus("error");
-      setResponseMsg("Transmission interrupted. Check network connectivity.");
-    }
+    }, 3000);
   };
 
   return (
