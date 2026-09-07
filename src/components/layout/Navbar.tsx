@@ -6,14 +6,14 @@ export const Navbar: React.FC = () => {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 px-6 py-4 md:px-12 flex justify-between items-center bg-[#100904]/90 backdrop-blur-lg border-b border-dashed border-[#40372e]">
       {/* Brand Wordmark & Larger Official Logo */}
-      <a href="#hero" className="flex items-center space-x-3.5 group">
-        <div className="relative w-11 h-11 md:w-12 md:h-12 overflow-hidden rounded-full border border-[#40372e] flex items-center justify-center bg-[#382416]/70 shadow-md group-hover:border-[#ffedd7] transition-all">
+      <a href="#hero" className="flex items-center space-x-3 group">
+        <div className="relative w-12 h-12 md:w-14 md:h-14 flex items-center justify-center transition-transform group-hover:scale-105">
           <Image
-            src="/images/logo.png"
-            alt="JIB Electrical Official Logo"
-            width={44}
-            height={44}
-            className="object-contain p-1 group-hover:scale-105 transition-transform"
+            src="/images/jib-fist-logo.png"
+            alt="JIB Electrical Enterprises Official Logo"
+            width={56}
+            height={56}
+            className="object-contain filter drop-shadow-[0_2px_10px_rgba(204,0,0,0.35)]"
             priority
           />
         </div>
