@@ -43,3 +43,15 @@ export interface WorkflowStep {
   description: string;
   details: string[];
 }
+
+export interface LeaderProfile {
+  name: string;
+  role: string;
+  tagline: string;
+  bio: string[];
+  credentials: string[];
+  metrics: { label: string; value: string }[];
+  portraitImage: string;
+  fieldImage: string;
+}
+

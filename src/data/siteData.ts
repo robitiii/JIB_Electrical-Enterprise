@@ -1,4 +1,4 @@
-import { ServiceItem, NavigationItem, GalleryProject } from "@/types";
+import { ServiceItem, NavigationItem, GalleryProject, LeaderProfile } from "@/types";
 
 export const COMPANY_INFO = {
   name: "JIB ELECTRICAL",
@@ -14,21 +14,48 @@ export const COMPANY_INFO = {
     line1: "20 HAMILTON STREET",
     line2: "GOODWOOD, CAPE TOWN, 7463",
   },
-  phones: ["+27 67 932 3052", "+27 67 818 6280"],
+  phones: ["+27 67 818 6280", "+27 74 654 3765"],
+  whatsapp: "+27 67 818 6280",
   email: "jibelectrical2@gmail.com",
   complianceStandard:
     "* COMPLIANCE VERIFIED UNDER OCCUPATIONAL HEALTH AND SAFETY ACT NO. 85 OF 1993.",
-  studioCredit: "BUILT WITH ANTIGRAVITY ENGINE",
+  studioCredit: "BUILT WITH ROBQTECH TECHNOLOGY",
   copyright: `© ${new Date().getFullYear()} JIB ELECTRICAL. ALL RIGHTS RESERVED.`,
 };
 
 export const NAV_LINKS: NavigationItem[] = [
   { label: "INTRO", href: "#hero", isActive: true },
+  { label: "ABOUT", href: "#about" },
   { label: "SERVICES", href: "#services" },
   { label: "OPERATIONS", href: "#operations" },
   { label: "COMPLIANCE", href: "#compliance" },
   { label: "CONTACT", href: "#contact" },
 ];
+
+export const LEADER_PROFILE: LeaderProfile = {
+  name: "JOHN IBALA",
+  role: "FOUNDER & LEAD ELECTRICAL ENGINEER",
+  tagline: "THE FACE, MASTERMIND & HANDS BEHIND JIB ELECTRICAL",
+  bio: [
+    "John Ibala is the principal engineer and director of JIB Electrical Enterprises. Bringing together deep technical precision, SANS regulatory mastery, and relentless on-site craftsmanship, John personally commands every project from initial schematic design to final power turn-on.",
+    "Rather than delegating high-stakes electrical and security perimeter infrastructure to unvetted sub-teams, John leads directly on the ground in Cape Town. Whether executing high-voltage perimeter shock systems, complete residential distribution boards, or complex Deye hybrid solar inverters and Hubble battery banks, John's personal signature is on every wire, bracket, and compliance certificate.",
+  ],
+  credentials: [
+    "SANS 10142-1 Certified Installation Electrician",
+    "Solar Hybrid Inverter & Lithium Battery Array Specialist",
+    "SABS-Approved Perimeter Defense & High-Voltage Energizers",
+    "OHS Act 85 Accredited Inspector (ECOC & Electric Fence COC)",
+  ],
+  metrics: [
+    { label: "LEADERSHIP & ENGINEERING", value: "DIRECT & HANDS-ON" },
+    { label: "STANDARDS COMPLIANCE", value: "SANS 10142-1 / OHS 85" },
+    { label: "OPERATIONAL BASE", value: "GOODWOOD, CAPE TOWN" },
+    { label: "WESTERN CAPE COVERAGE", value: "METRO-WIDE" },
+  ],
+  portraitImage: "/images/john-ibala-director.png",
+  fieldImage: "/images/john-ibala-in-action.png",
+};
+
 
 export const SERVICES: ServiceItem[] = [
   {

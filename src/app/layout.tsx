@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     locale: "en_ZA",
     images: [
       {
-        url: "/images/JIB Eletrical-Enterprise-logo.png",
+        url: "/images/logo.png",
         width: 800,
         height: 600,
         alt: "JIB Electrical Enterprises Logo",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     ],
   },
   icons: {
-    icon: "/images/JIB Eletrical-Enterprice-logo-transparent background.png",
+    icon: "/images/logo.png",
   },
 };
 

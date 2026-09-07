@@ -44,15 +44,15 @@ export const HeroSection: React.FC = () => {
         <div className="lg:col-span-6 xl:col-span-6 flex flex-col space-y-6 relative z-30">
           {/* Micro Tagline */}
           <div className="inline-flex items-center space-x-2">
-            <span className="w-2 h-2 rounded-full bg-[#dc5000] animate-ping"></span>
-            <span className="text-xs md:text-sm tracking-[0.25em] text-[#dc5000] uppercase font-bold">
+            <span className="w-2 h-2 rounded-full bg-[#cc0000] animate-ping"></span>
+            <span className="text-xs md:text-sm tracking-[0.25em] text-[#cc0000] uppercase font-bold">
               {COMPANY_INFO.directiveTagline}
             </span>
           </div>
 
           {/* Master Headline (Layered ABOVE the hero image with drop shadow) */}
           <h1 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-black uppercase text-[#ffedd7] leading-[0.9] tracking-tight relative z-30 drop-shadow-[0_8px_32px_rgba(16,9,4,0.95)] lg:-mr-12 xl:-mr-20">
-            POWER ARCHITECTURE FOR CAPE TOWN.
+            POWER ARCHITECTURE.
           </h1>
 
           {/* Subheading / Description */}
@@ -65,18 +65,18 @@ export const HeroSection: React.FC = () => {
             {/* Primary Quote Capture CTA */}
             <a
               href="#contact"
-              className="inline-flex items-center justify-center px-8 py-4.5 bg-[#382416] hover:bg-[#ffedd7] text-[#ffedd7] hover:text-[#100904] text-sm md:text-base font-bold uppercase tracking-widest rounded-full transition-all duration-300 border border-[#dc5000] shadow-[0_0_30px_rgba(220,80,0,0.35)] text-center group"
+              className="inline-flex items-center justify-center px-8 py-4.5 bg-[#382416] hover:bg-[#ffedd7] text-[#ffedd7] hover:text-[#100904] text-sm md:text-base font-bold uppercase tracking-widest rounded-full transition-all duration-300 border border-[#cc0000] shadow-[0_0_30px_rgba(220,80,0,0.35)] text-center group"
             >
               <span>SUBMIT A QUOTE</span>
-              <span className="ml-2 text-[#dc5000] group-hover:text-[#100904] transition-colors">⚡</span>
+              <span className="ml-2 text-[#cc0000] group-hover:text-[#100904] transition-colors">⚡</span>
             </a>
 
             {/* Direct Phone / Contact CTA */}
             <a
-              href="tel:+27679323052"
+              href="tel:+27678186280"
               className="inline-flex items-center justify-center px-7 py-4.5 border border-[#ffedd7] hover:bg-[#ffedd7]/10 text-[#ffedd7] text-sm md:text-base font-semibold uppercase tracking-wider rounded-full transition-all duration-300 text-center"
             >
-              CALL: +27 67 932 3052
+              CALL: +27 67 818 6280
             </a>
           </div>
 
@@ -113,7 +113,7 @@ export const HeroSection: React.FC = () => {
 
               {/* Top Status & Registration Tag */}
               <div className="absolute top-4 left-4 right-4 flex justify-between items-center pointer-events-none">
-                <span className="px-3 py-1 rounded bg-[#100904]/90 backdrop-blur-md border border-[#40372e] text-[10px] font-mono uppercase tracking-wider text-[#dc5000] font-bold">
+                <span className="px-3 py-1 rounded bg-[#100904]/90 backdrop-blur-md border border-[#40372e] text-[10px] font-mono uppercase tracking-wider text-[#cc0000] font-bold">
                   ● {activeImage.tag}
                 </span>
 
@@ -123,14 +123,14 @@ export const HeroSection: React.FC = () => {
               </div>
 
               {/* Orbiting Electrical Pulse Ring */}
-              <div className="absolute top-16 right-5 w-14 h-14 rounded-full border border-dashed border-[#dc5000]/60 animate-[spin_20s_linear_infinite] pointer-events-none hidden sm:flex items-center justify-center">
-                <div className="w-2 h-2 rounded-full bg-[#dc5000]"></div>
+              <div className="absolute top-16 right-5 w-14 h-14 rounded-full border border-dashed border-[#cc0000]/60 animate-[spin_20s_linear_infinite] pointer-events-none hidden sm:flex items-center justify-center">
+                <div className="w-2 h-2 rounded-full bg-[#cc0000]"></div>
               </div>
 
               {/* Bottom Details & Image Selector Tabs */}
               <div className="absolute bottom-4 left-4 right-4 space-y-3">
                 <div className="bg-[#100904]/85 backdrop-blur-md border border-[#40372e] p-4 rounded-lg">
-                  <span className="text-[10px] uppercase tracking-widest text-[#dc5000] font-bold block">
+                  <span className="text-[10px] uppercase tracking-widest text-[#cc0000] font-bold block">
                     OPERATIONAL FIELD DEPLOYMENT
                   </span>
                   <p className="text-sm md:text-base uppercase tracking-wider text-[#ffedd7] font-semibold mt-0.5">
@@ -149,7 +149,7 @@ export const HeroSection: React.FC = () => {
                       onClick={() => setActiveImageIndex(idx)}
                       className={`flex-1 py-1.5 px-2 rounded text-[9px] uppercase tracking-wider font-semibold border transition-all cursor-pointer ${
                         activeImageIndex === idx
-                          ? "border-[#dc5000] bg-[#dc5000]/20 text-[#ffedd7]"
+                          ? "border-[#cc0000] bg-[#cc0000]/20 text-[#ffedd7]"
                           : "border-[#40372e] bg-[#100904]/70 text-[#6c5f51] hover:text-[#ffedd7]"
                       }`}
                     >

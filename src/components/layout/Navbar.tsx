@@ -9,7 +9,7 @@ export const Navbar: React.FC = () => {
       <a href="#hero" className="flex items-center space-x-3.5 group">
         <div className="relative w-11 h-11 md:w-12 md:h-12 overflow-hidden rounded-full border border-[#40372e] flex items-center justify-center bg-[#382416]/70 shadow-md group-hover:border-[#ffedd7] transition-all">
           <Image
-            src="/images/JIB Eletrical-Enterprice-logo-transparent background.png"
+            src="/images/logo.png"
             alt="JIB Electrical Official Logo"
             width={44}
             height={44}
@@ -18,7 +18,7 @@ export const Navbar: React.FC = () => {
           />
         </div>
         <div className="flex flex-col">
-          <span className="text-sm md:text-base tracking-widest font-bold uppercase text-[#ffedd7] group-hover:text-[#dc5000] transition-colors duration-200">
+          <span className="text-sm md:text-base tracking-widest font-bold uppercase text-[#ffedd7] group-hover:text-[#cc0000] transition-colors duration-200">
             {COMPANY_INFO.name}
           </span>
           <span className="text-[9px] uppercase tracking-wider text-[#6c5f51] font-mono -mt-0.5">
@@ -48,15 +48,15 @@ export const Navbar: React.FC = () => {
       <div className="flex items-center space-x-4 md:space-x-6">
         <a
           href="#contact"
-          className="hidden sm:inline-flex items-center justify-center px-4 py-2 border border-[#dc5000] bg-[#dc5000]/15 hover:bg-[#dc5000] hover:text-[#100904] text-[#ffedd7] text-xs uppercase tracking-wider font-semibold rounded-full transition-all duration-300 shadow-[0_0_15px_rgba(220,80,0,0.2)]"
+          className="hidden sm:inline-flex items-center justify-center px-4 py-2 border border-[#cc0000] bg-[#cc0000]/15 hover:bg-[#cc0000] hover:text-[#100904] text-[#ffedd7] text-xs uppercase tracking-wider font-semibold rounded-full transition-all duration-300 shadow-[0_0_15px_rgba(220,80,0,0.2)]"
         >
           SUBMIT QUOTE
         </a>
 
         {/* Active Current Indicator */}
         <div className="flex items-center space-x-2 bg-[#100904]/80 px-2.5 py-1 rounded-full border border-[#40372e]/50">
-          <span className="w-2 h-2 rounded-full bg-[#dc5000] animate-pulse"></span>
-          <span className="text-[10px] uppercase tracking-widest text-[#dc5000] font-medium hidden md:inline">
+          <span className="w-2 h-2 rounded-full bg-[#cc0000] animate-pulse"></span>
+          <span className="text-[10px] uppercase tracking-widest text-[#cc0000] font-medium hidden md:inline">
             LIVE CURRENT
           </span>
         </div>

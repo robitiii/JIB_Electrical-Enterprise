@@ -12,8 +12,8 @@ export const ServicesSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-start">
           {/* Headline Column */}
           <div className="lg:col-span-5 space-y-4">
-            <span className="text-xs md:text-sm tracking-[0.25em] text-[#dc5000] uppercase font-bold flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#dc5000]"></span>
+            <span className="text-xs md:text-sm tracking-[0.25em] text-[#cc0000] uppercase font-bold flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#cc0000]"></span>
               CORE CAPABILITIES
             </span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase leading-[0.9] text-[#ffedd7] tracking-tight">
@@ -48,7 +48,7 @@ export const ServicesSection: React.FC = () => {
                 className="object-cover filter brightness-85 contrast-110 group-hover:scale-105 group-hover:brightness-100 transition-all duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#100904] via-transparent to-transparent"></div>
-              <span className="absolute top-3 left-3 px-2 py-0.5 rounded bg-[#100904]/80 backdrop-blur-sm border border-[#40372e] text-[9px] text-[#dc5000] font-semibold tracking-wider uppercase">
+              <span className="absolute top-3 left-3 px-2 py-0.5 rounded bg-[#100904]/80 backdrop-blur-sm border border-[#40372e] text-[9px] text-[#cc0000] font-semibold tracking-wider uppercase">
                 {service.code} // {service.category}
               </span>
             </div>

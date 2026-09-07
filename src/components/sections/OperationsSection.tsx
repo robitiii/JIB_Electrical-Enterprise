@@ -12,8 +12,8 @@ export const OperationsSection: React.FC = () => {
       <div className="w-full max-w-7xl mx-auto my-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-start">
           <div className="lg:col-span-5 space-y-4">
-            <span className="text-xs md:text-sm tracking-[0.25em] text-[#dc5000] uppercase font-bold flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#dc5000]"></span>
+            <span className="text-xs md:text-sm tracking-[0.25em] text-[#cc0000] uppercase font-bold flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#cc0000]"></span>
               FIELD DIRECTIVES // ON-SITE EXECUTION
             </span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase leading-[0.9] text-[#ffedd7] tracking-tight">
@@ -49,7 +49,7 @@ export const OperationsSection: React.FC = () => {
 
               {/* Tag indicator */}
               <div className="absolute top-3 left-3 bg-[#100904]/80 backdrop-blur-sm border border-[#40372e] px-2 py-0.5 rounded">
-                <span className="text-[8px] font-mono text-[#dc5000] uppercase tracking-wider font-semibold">
+                <span className="text-[8px] font-mono text-[#cc0000] uppercase tracking-wider font-semibold">
                   {proj.tag}
                 </span>
               </div>
@@ -61,7 +61,7 @@ export const OperationsSection: React.FC = () => {
                 <span className="text-[9px] uppercase tracking-wider text-[#6c5f51] block font-mono">
                   {proj.location}
                 </span>
-                <h3 className="text-sm font-semibold uppercase text-[#ffedd7] tracking-wide mt-1 group-hover:text-[#dc5000] transition-colors">
+                <h3 className="text-sm font-semibold uppercase text-[#ffedd7] tracking-wide mt-1 group-hover:text-[#cc0000] transition-colors">
                   {proj.title}
                 </h3>
                 <p className="text-[11px] text-[#6c5f51] uppercase tracking-wide leading-relaxed mt-2 group-hover:text-[#ffedd7]/80 transition-colors">
@@ -73,7 +73,7 @@ export const OperationsSection: React.FC = () => {
                 <span className="text-[8px] uppercase tracking-widest text-[#ffedd7]/60">
                   STATUS: OPERATIONAL
                 </span>
-                <span className="text-[#dc5000] text-xs">⚡</span>
+                <span className="text-[#cc0000] text-xs">⚡</span>
               </div>
             </div>
           </div>

@@ -25,8 +25,9 @@ export const ContactSection: React.FC = () => {
     e.preventDefault();
     setStatus("submitting");
     
-    // Format the phone number (remove spaces, plus signs, etc.)
-    const phone = COMPANY_INFO.phones[0].replace(/\D/g, ''); // "27679323052"
+    // WhatsApp destination number: +27 67 818 6280 -> "27678186280"
+    const targetWhatsapp = COMPANY_INFO.whatsapp || "+27 67 818 6280";
+    const phone = targetWhatsapp.replace(/\D/g, "");
     
     // Construct the WhatsApp message
     const message = `*JIB Electrical - Quote Request*
@@ -66,8 +67,8 @@ export const ContactSection: React.FC = () => {
           {/* Left Column: Direct Connection Info */}
           <div className="lg:col-span-4 space-y-8">
             <div className="space-y-4">
-              <span className="text-xs md:text-sm tracking-[0.25em] text-[#dc5000] uppercase font-bold flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#dc5000]"></span>
+              <span className="text-xs md:text-sm tracking-[0.25em] text-[#cc0000] uppercase font-bold flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[#cc0000]"></span>
                 INITIATE DIRECT QUOTE
               </span>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase leading-[0.9] text-[#ffedd7] tracking-tight">
@@ -84,22 +85,27 @@ export const ContactSection: React.FC = () => {
 
               <div>
                 <span className="text-[#6c5f51] block text-xs">COMMUNICATION LINES</span>
-                {COMPANY_INFO.phones.map((phone) => (
-                  <a
-                    key={phone}
-                    href={`tel:${phone.replace(/\s+/g, "")}`}
-                    className="block mt-1 hover:text-[#dc5000] font-semibold transition-colors duration-200"
-                  >
-                    {phone}
-                  </a>
-                ))}
+                {COMPANY_INFO.phones.map((phone) => {
+                  const cleanTel = phone.startsWith("+")
+                    ? phone.replace(/\s+/g, "")
+                    : `+27${phone.replace(/^0/, "").replace(/\s+/g, "")}`;
+                  return (
+                    <a
+                      key={phone}
+                      href={`tel:${cleanTel}`}
+                      className="block mt-1 hover:text-[#cc0000] font-semibold transition-colors duration-200"
+                    >
+                      {phone}
+                    </a>
+                  );
+                })}
               </div>
 
               <div>
                 <span className="text-[#6c5f51] block text-xs">DIGITAL SYSTEM ROUTE</span>
                 <a
                   href={`mailto:${COMPANY_INFO.email}`}
-                  className="block mt-1 hover:text-[#dc5000] font-semibold transition-colors duration-200"
+                  className="block mt-1 hover:text-[#cc0000] font-semibold transition-colors duration-200"
                 >
                   {COMPANY_INFO.email.toUpperCase()}
                 </a>
@@ -160,7 +166,7 @@ export const ContactSection: React.FC = () => {
               <div
                 className={`text-xs uppercase tracking-widest p-4 border border-dashed rounded ${
                   status === "success"
-                    ? "border-[#dc5000] text-[#ffedd7] bg-[#dc5000]/15"
+                    ? "border-[#cc0000] text-[#ffedd7] bg-[#cc0000]/15"
                     : "border-red-500/50 text-red-300 bg-red-950/20"
                 }`}
               >
@@ -173,7 +179,7 @@ export const ContactSection: React.FC = () => {
               <button
                 type="submit"
                 disabled={status === "submitting"}
-                className="w-full py-4.5 bg-[#382416] hover:bg-[#ffedd7] text-[#ffedd7] hover:text-[#100904] uppercase tracking-widest text-sm font-bold rounded-[36px] transition-all duration-300 border border-[#dc5000] shadow-[0_0_20px_rgba(220,80,0,0.3)] disabled:opacity-50"
+                className="w-full py-4.5 bg-[#382416] hover:bg-[#ffedd7] text-[#ffedd7] hover:text-[#100904] uppercase tracking-widest text-sm font-bold rounded-[36px] transition-all duration-300 border border-[#cc0000] shadow-[0_0_20px_rgba(220,80,0,0.3)] disabled:opacity-50"
               >
                 {status === "submitting" ? "TRANSMITTING..." : "TRANSMIT QUOTE REQUEST"}
               </button>
@@ -187,15 +193,20 @@ export const ContactSection: React.FC = () => {
             type="submit"
             onClick={handleSubmit}
             disabled={status === "submitting"}
-            className="w-full py-4.5 bg-[#382416] hover:bg-[#ffedd7] text-[#ffedd7] hover:text-[#100904] uppercase tracking-widest text-sm font-bold rounded-[36px] transition-all duration-300 border border-[#dc5000] shadow-[0_0_25px_rgba(220,80,0,0.35)] disabled:opacity-50 cursor-pointer"
+            className="w-full py-4.5 bg-[#382416] hover:bg-[#ffedd7] text-[#ffedd7] hover:text-[#100904] uppercase tracking-widest text-sm font-bold rounded-[36px] transition-all duration-300 border border-[#cc0000] shadow-[0_0_25px_rgba(220,80,0,0.35)] disabled:opacity-50 cursor-pointer"
           >
             {status === "submitting" ? "TRANSMITTING..." : "TRANSMIT QUOTE REQUEST"}
           </button>
 
           <div className="text-right mt-12">
-            <span className="text-[10px] text-[#dc5000] uppercase tracking-widest block font-bold">
+            <a 
+              href="https://robqtech.co.za" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-[10px] text-[#cc0000] uppercase tracking-widest block font-bold hover:text-[#ffedd7] transition-colors"
+            >
               {COMPANY_INFO.studioCredit}
-            </span>
+            </a>
             <span className="text-[9px] text-[#6c5f51] uppercase tracking-widest block mt-1 font-mono">
               {COMPANY_INFO.copyright}
             </span>

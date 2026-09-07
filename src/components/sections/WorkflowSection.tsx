@@ -10,8 +10,8 @@ export const WorkflowSection: React.FC = () => {
       <div className="w-full max-w-7xl mx-auto flex flex-col justify-center h-full">
         {/* Header */}
         <div className="space-y-4 mb-16">
-          <span className="text-xs md:text-sm tracking-[0.25em] text-[#dc5000] uppercase font-bold flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-[#dc5000]"></span>
+          <span className="text-xs md:text-sm tracking-[0.25em] text-[#cc0000] uppercase font-bold flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-[#cc0000]"></span>
             OPERATIONAL PROTOCOL // STANDARD PROCEDURE
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase leading-[0.9] text-[#ffedd7] tracking-tight">
@@ -31,7 +31,7 @@ export const WorkflowSection: React.FC = () => {
             <div key={step.id} className="relative z-10 flex flex-col group">
               {/* Step Number & Node */}
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 md:w-20 md:h-20 shrink-0 bg-[#382416]/40 border border-[#40372e] rounded-full flex items-center justify-center text-2xl md:text-3xl font-black text-[#ffedd7] group-hover:border-[#dc5000] group-hover:text-[#dc5000] group-hover:bg-[#dc5000]/10 transition-all duration-300">
+                <div className="w-16 h-16 md:w-20 md:h-20 shrink-0 bg-[#382416]/40 border border-[#40372e] rounded-full flex items-center justify-center text-2xl md:text-3xl font-black text-[#ffedd7] group-hover:border-[#cc0000] group-hover:text-[#cc0000] group-hover:bg-[#cc0000]/10 transition-all duration-300">
                   {step.stepNumber}
                 </div>
                 {/* Mobile/Tablet vertical connector (optional) or just line */}
@@ -40,7 +40,7 @@ export const WorkflowSection: React.FC = () => {
 
               {/* Content */}
               <div className="bg-[#382416]/20 border border-[#40372e] p-6 rounded-xl flex-1 flex flex-col group-hover:border-[#ffedd7]/50 transition-colors duration-300">
-                <h3 className="text-lg font-bold uppercase text-[#ffedd7] mb-3 group-hover:text-[#dc5000] transition-colors">
+                <h3 className="text-lg font-bold uppercase text-[#ffedd7] mb-3 group-hover:text-[#cc0000] transition-colors">
                   {step.title}
                 </h3>
                 <p className="text-sm text-[#ffedd7]/70 leading-relaxed mb-6 flex-1">
@@ -51,7 +51,7 @@ export const WorkflowSection: React.FC = () => {
                 <ul className="space-y-2 border-t border-dashed border-[#40372e] pt-4">
                   {step.details.map((detail, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-xs text-[#6c5f51] font-mono uppercase tracking-wider">
-                      <span className="text-[#dc5000] mt-[2px]">►</span> {detail}
+                      <span className="text-[#cc0000] mt-[2px]">►</span> {detail}
                     </li>
                   ))}
                 </ul>
