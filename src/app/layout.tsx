@@ -69,6 +69,9 @@ export const metadata: Metadata = {
     icon: "/images/logo.png",
     apple: "/images/logo.png",
   },
+  verification: {
+    google: "jlVHNL1cx9wzrP4-LpvuvGEL2nCv_50xWaQpUhVYPek",
+  },
 };
 
 const jsonLd = {
@@ -163,6 +166,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} scroll-smooth`}>
       <head>
+        <meta
+          name="google-site-verification"
+          content="jlVHNL1cx9wzrP4-LpvuvGEL2nCv_50xWaQpUhVYPek"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
